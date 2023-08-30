@@ -1,11 +1,16 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const { dbConnect } = require('./config/mongo')
+const dbConnect = require('./config/mongo')
 require('dotenv').config();
+const port = process.env.port || 3000;
 
 app.use(cors())
-const port = process.env.port || 3000;
+
+// Definición de las rutas
+const trackRoutes = require('./routes/tracks.routes')
+
+app.use('/', trackRoutes)
 
 dbConnect();
 
