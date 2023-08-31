@@ -9,8 +9,9 @@ app.use(cors())
 
 // Definición de las rutas
 const trackRoutes = require('./routes/tracks.routes')
+const indexRoutes = require('./routes')
 
-app.use('/', trackRoutes)
+app.use('/api', indexRoutes)
 
 dbConnect();
 

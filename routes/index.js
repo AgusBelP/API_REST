@@ -4,7 +4,13 @@ const fs = require('fs');
 
 const path_routes = __dirname;
 
-const a = fs.readdirSync(path_routes);
+const removeExtension = (fileName) =>{
+    return fileName.split(".")[0]
+}
 
+fs.readdirSync(path_routes).filter((file) => {
+
+
+})
 
 module.exports = router;
