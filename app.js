@@ -6,6 +6,8 @@ require('dotenv').config();
 const port = process.env.port || 3000;
 
 app.use(cors())
+app.use(express.json())
+app.use(express.static('storage'));
 
 // Definición de las rutas
 const trackRoutes = require('./routes/tracks.routes')
