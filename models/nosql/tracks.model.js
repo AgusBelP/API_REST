@@ -36,8 +36,8 @@ const TracksSchema = new mongoose.Schema(
                 type:Number
             },
         },
-        mediaID:{
-            type:mongoose.Types.ObjectId
+        mediaId:{
+            type:mongoose.Types.ObjectId,
         }
     },
     {

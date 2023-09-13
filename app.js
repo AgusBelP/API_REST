@@ -10,7 +10,6 @@ app.use(express.json())
 app.use(express.static('storage'));
 
 // Definición de las rutas
-const trackRoutes = require('./routes/tracks.routes')
 const indexRoutes = require('./routes')
 
 app.use('/api', indexRoutes)
